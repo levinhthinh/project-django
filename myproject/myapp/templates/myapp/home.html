@@ -1,0 +1,56 @@
+{% comment %} {{ho ten}}-> laasy bieesn tuwf duwx lieeuj {% endcomment %}
+{% comment %} {%for x in bieesn%}
+{{x}}
+{% endfor %} {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        strong{
+            font-size: 20px;
+        }
+        .container{
+            margin: 50px 20% 0px;
+        }
+        .title{
+            display:flex;
+            width:100%;
+            justify-content:center;
+            margin:0px 0px 50px;
+            background-color:blue;
+            color:white
+        }
+        .footer{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title"><h1>Trang giới thiệu</h1></div>
+
+        <strong>Họ và Tên:</strong> {{Name}}
+        <br>
+        <strong>Tuổi:</strong> {{Age}}
+        <br>
+        <strong>Ngày sinh:</strong> {{Birth}}
+        <br>
+        <strong>Hoạt động yêu thích:</strong>
+        <ul>
+            {% for act in Hobby %}
+                <li>{{act}}</li>
+            {% endfor %}
+        </ul>
+        
+        <div class="footer">
+            <div><strong>Email:</strong> {{Email}}</div>
+            <div><strong>Số điện thoại:</strong> {{Sdt}}</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,19 +1,18 @@
-from django.shortcuts import render
-
+from django.shortcuts import render,redirect
+from .forms import InfoForm
+from .models import Info
 # Create your views here.
-def homepage(request):
-    context= {
-        'Name': 'Lê Vĩnh Thịnh',
-        'Age': '15',
-        'Birth': '10/01',
-        'Hobby': [
-            'ngủ',
-            'ăn'
-            'chơi game',
-            'thể dục',
-            'học tập'
-        ],
-        'Email':'123@gmail.com',
-        'Sdt':'1234056'
-    }
-    return render(request,"myapp/home.html",context)
+
+def add_info(request):
+    if request.method == 'POST':
+        form = InfoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('show_info')
+    else:
+        form = InfoForm()
+    return render(request,'myapp/add_info.html', {'form': form})
+ 
+def show_info(request):
+    info = Info.objects.last()
+    return render(request,'myapp/show_info.html' , {'info': info})

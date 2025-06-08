@@ -1,7 +1,10 @@
 from django.shortcuts import render,redirect
 from .forms import InfoForm
 from .models import Info
+from .models import Book
 # Create your views here.
+def shop(request):
+    return render(request,'myapp/shop.html')
 
 def add_info(request):
     if request.method == 'POST':
@@ -16,3 +19,7 @@ def add_info(request):
 def show_info(request):
     info = Info.objects.last()
     return render(request,'myapp/show_info.html' , {'info': info})
+
+def book_list(request):
+    books= Book.objects.all()
+    return render(request,'myapp/bookstore.html', {'books':books})

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex;">
+        <div style="width: max-content; height: max-content; margin-left:50px">
+            {% for book in books %}
+            <h1 style="display: flex; justify-content: center;">{{book.Title}}</h1>
+            <h3>{{book.Author}}</h3>
+            <h3>{{book.Description}}</h3>
+            <h3>{{book.Price}}</h3>
+            <h3>created: {{book.Created_at}}</h3>
+            {%endfor%}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    h1::first-letter{
+        text-transform: capitalize;
+    }
+    p::first-letter{
+        text-transform: capitalize;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 49% 49%;
+        column-gap: 2%;
+    }
+    .purchase{
+        display: flex;
+        justify-content: space-between;
+    }
+    .information{
+        padding-right: 15px;
+    }
+    .information> .price{
+        color: red;
+    }
+    .information> .description::first-line{
+        font-weight: bold;
+    }
+</style>
+<body>
+    <div class="container">
+        <div>
+            <img src="alstroemeria_indian_summer.jpg" alt="">
+            <div class="purchase">
+                Tổng tiền giỏ hàng
+                <button>Thêm vào giỏ</button>
+            </div>
+        </div>
+
+        <div class="information">
+            <h1>bànbàn phím côngbàn phím côngbàn phím công phím công</h1>
+            <h1 class="price">1000000 &#8363</h1>
+            <div class="description">
+                Mô tả ngắn:<br>
+                bafn phsim lafm tuw fnhucwj pas2
+            </div>
+            <button>Mua ngay</button>
+        </div>
+    </div>
+</body>
+</html>

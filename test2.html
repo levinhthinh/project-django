@@ -6,54 +6,102 @@
     <title>Document</title>
 </head>
 <style>
-    img{
-        max-width: 100%;
-        height: auto;
-    }
-    h1::first-letter{
-        text-transform: capitalize;
-    }
-    p::first-letter{
-        text-transform: capitalize;
-    }
-    .container{
+    .shop_detail> .container{
         display: grid;
         grid-template-columns: 49% 49%;
         column-gap: 2%;
     }
-    .purchase{
+
+    /* bên trái */
+    .shop_detail> .container> .main> img{
+        max-width: 100%;
+        height: auto;
+    }
+    .shop_detail> .container> .main> .add{
         display: flex;
         justify-content: space-between;
     }
-    .information{
+    .shop_detail> .container> .main> .add> .btn{
+        width: 100%;
+        color: white;
+        background-color: red;
+        border-radius: 10px;
+        border: none;
+    }    
+    .shop_detail> .container> .main> .add> .btn:active{
+        color: red;
+        background-color: white;
+        box-shadow: 2px 2px 5px #fc894d;
+    }
+
+    /* bên phải */
+    .shop_detail> .container> .information{
         padding-right: 15px;
     }
-    .information> .price{
+    .shop_detail> .container> .purchase> h1::first-letter{
+        text-transform: capitalize;
+    }
+    .shop_detail> .container> .purchase> .price{
         color: red;
     }
-    .information> .description::first-line{
+    .shop_detail> .container> .purchase> .description::first-line{
         font-weight: bold;
     }
+
+    /* nút */
+    .shop_detail> .container> .purchase> .btn{
+        width: 100%;
+        color: white;
+        background-color: red;
+        border-radius: 10px;
+        border: none;
+        margin-top: 30px;
+        padding: 10px 0px;
+    }
+    .shop_detail> .container> .purchase> .btn::first-line{
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .shop_detail> .container> .purchase> .btn:active{
+        color: red;
+        background-color: white;
+        box-shadow: 2px 2px 5px #fc894d;
+    }
+
+    /* thông tin sản phẩm */
+    .shop_detail> .information{
+        margin-top: 60px;
+    }
+    .shop_detail> .information> p::first-letter{
+        text-transform: capitalize;
+    }
 </style>
-<body>
+<body class="shop_detail">
     <div class="container">
-        <div>
+        <div class="main">
             <img src="alstroemeria_indian_summer.jpg" alt="">
-            <div class="purchase">
-                Tổng tiền giỏ hàng
-                <button>Thêm vào giỏ</button>
+            <div class="add">
+                Tổng tiền giỏ hàng:
+                <button class="btn" style="width: max-content; border-radius: 4px;">Thêm vào giỏ</button>
             </div>
         </div>
 
-        <div class="information">
+        <div class="purchase">
             <h1>bànbàn phím côngbàn phím côngbàn phím công phím công</h1>
             <h1 class="price">1000000 &#8363</h1>
             <div class="description">
                 Mô tả ngắn:<br>
                 bafn phsim lafm tuw fnhucwj pas2
             </div>
-            <button>Mua ngay</button>
+            <button class="btn bold pad">
+                Mua ngay <br> 
+                giao tận nơi hoặc nhận tại cửa hàng
+            </button>
         </div>
+    </div>
+    <div class="information">
+        <h1>Thông tin sản phẩm</h1>
+        <p>thoog tin 1</p>
     </div>
 </body>
 </html>

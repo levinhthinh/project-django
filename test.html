@@ -6,14 +6,7 @@
     <title>Document</title>
 </head>
 <style>
-    img{
-        max-width: 100%;
-        height: auto;
-    }
-    p::first-letter{
-        text-transform: capitalize;
-    }
-    .container{
+    .shop_content> .container{
         display: grid;
         grid-template-columns: 18% 18% 18% 18% 18%;
         grid-template-rows: auto;
@@ -21,7 +14,7 @@
         row-gap: 40px;
         
     }
-    .item{
+    .shop_content> .container> .item{
         width: 100%;
         height: 300px;
         border-radius: 10px;
@@ -29,10 +22,17 @@
         border-color: whitesmoke;
         overflow: hidden;
     }
-    .item-content{
+    .shop_content> .container> .item> img{
+        max-width: 100%;
+        height: auto;
+    }
+    .shop_content> .container> .item> p::first-letter{
+        text-transform: capitalize;
+    }
+    .shop_content>  .container> .item> .item-content{
         margin: 0px 8px;
     }
-    .item> .item-content> .title{
+    .shop_content>  .container>.item> .item-content> .title{
         margin: 0px 0px 10px;
         line-height: 1.5em;
         height: 3em; 
@@ -41,7 +41,7 @@
         font-weight: bold;
     }
     
-    .item> .item-content> .price{
+    .shop_content> .container> .item> .item-content> .price{
         color: red;
         margin: 0px;
         font-size: larger;
@@ -50,7 +50,7 @@
 
 
 </style>
-<body>
+<body class="shop_content">
     <div class="container">
         <div class="item">
             <img src="alstroemeria_indian_summer.jpg" alt="không load">

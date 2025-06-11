@@ -51,12 +51,14 @@
     display: grid;
     grid-template-columns: 49% 49%;
     column-gap: 2%;
+    margin: 10px 10px 0px;
 }
 
 /* bên trái */
 .shop_detail> .container> .main> img{
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 .shop_detail> .container> .main> .add{
     display: flex;

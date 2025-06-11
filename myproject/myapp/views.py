@@ -3,8 +3,11 @@ from .forms import InfoForm
 from .models import Info
 from .models import Book
 # Create your views here.
-def shop(request):
+def shop_content(request):
     return render(request,'myapp/shop_content.html')
+
+def shop_detail(request):
+    return render(request,'myapp/shop_detail.html')
 
 def add_info(request):
     if request.method == 'POST':

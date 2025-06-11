@@ -1,17 +1,18 @@
+{% extends 'myapp/shop_template.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'shop.css' %}">
 </head>
-<style>
-
-</style>
+{% block content %}
 <body class="shop_detail">
     <div class="container">
         <div class="main">
-            <img src="alstroemeria_indian_summer.jpg" alt="">
+            <img src= "{%static 'flower.jpg' %}" alt="">
             <div class="add">
                 Tổng tiền giỏ hàng:
                 <button class="btn" style="width: max-content; border-radius: 4px;">Thêm vào giỏ</button>
@@ -36,4 +37,4 @@
         <p>thoog tin 1</p>
     </div>
 </body>
-</html>
+{% endblock %}

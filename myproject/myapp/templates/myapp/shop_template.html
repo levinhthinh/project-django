@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'shop.css' %}">
+</head>
+<body>
+    <header>
+        <div class="search">
+            <input style="border: none; width: 100%;" type="text" placeholder="Bạn cần tìm gì?"> 
+            <span><i class="fa fa-search" aria-hidden="true"></i></span>
+        </div>
+        <div class="detail">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            Hotline
+            0123456789
+        </div>
+        <div class="detail">
+            <i class="fa fa-location-arrow" aria-hidden="true"></i>
+            Hệ thống giao hàng
+        </div>
+        <div class="detail">
+            <i class="fa-solid fa-calendar-days"></i>
+            Tra cứu đơn hàng
+        </div>
+        <div class="detail">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            Giỏ hàng
+        </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <div class="information">
+            <p>Về trang</p> 
+            <p>Giới thiệu</p> 
+            <p>Tuyển dụng</p> 
+            <p>Liên hệ</p>
+        </div>
+
+        <div class="information">
+            <p>Chính sách</p> 
+            <p>Bảo hành</p>
+            <p>Giao hàng</p> 
+            <p>Bảo mật</p> 
+        </div>
+
+        <div class="information">
+            <p>Thông tin</p> 
+            <p>Hệ thống cửa hàng</p>
+            <p>Cách thanh toán</p>
+            <p>Hướng dẫn bảo hành</p>
+        </div>
+
+        <div class="information">
+            <p>Tổng đài hỗ trợ</p> 
+            <p>Mua hàng: 0123456789</p>
+            <p>Bảo hành: 0987654321</p>
+            <p>Email: website@gmail.com</p>
+        </div>
+    </footer>
+</body>
+</html>

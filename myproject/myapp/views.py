@@ -4,7 +4,7 @@ from .models import Info
 from .models import Book
 # Create your views here.
 def shop(request):
-    return render(request,'myapp/shop.html')
+    return render(request,'myapp/shop_content.html')
 
 def add_info(request):
     if request.method == 'POST':

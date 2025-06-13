@@ -19,3 +19,24 @@ class Book(models.Model):
 
     def __str__(self):
         return self.Title
+    
+class Keyboard(models.Model):
+    Name= models.CharField(max_length=75)
+    Image=models.ImageField(upload_to='images',default='bad_sign.png')
+    Price= models.IntegerField(validators=[validators.MaxValueValidator(3000000),validators.MinValueValidator(1000)])
+    Short_Description= models.TextField(max_length=300)
+    Material=models.CharField(max_length=100)
+    Place_of_Origin=models.CharField(max_length=100)
+    Width= models.DecimalField(max_digits=4,decimal_places=2)
+    Length= models.DecimalField(max_digits=4,decimal_places=2)
+    Height= models.DecimalField(max_digits=4,decimal_places=2)
+    Dimensions=f"{Length} x {Width} x {Height}"
+
+    def __str__(self):
+        return self.Name
+    
+    class Meta:
+        constraints=[
+            models.UniqueConstraint(fields=['Name','Image'], name='unique keyboard')
+        ]
+        

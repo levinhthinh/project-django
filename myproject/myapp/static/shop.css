@@ -2,48 +2,56 @@
     margin: 0px;
 }
 /* shop content */
-.shop_content> .container{
-    display: grid;
-    margin: 40px 40px 0px;
-    grid-template-columns: 18% 18% 18% 18% 18%;
-    grid-template-rows: auto;
-    column-gap: 2.5%;
-    row-gap: 40px;
+.shop_content{
+    .container{
+        display: grid;
+        margin: 40px 40px 0px;
+        grid-template-columns: 18% 18% 18% 18% 18%;
+        grid-template-rows: auto;
+        column-gap: 2.5%;
+        row-gap: 40px;
+        a:link{
+            text-decoration: none;
+            color: inherit;
+        }
+        .item{
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            border: solid;
+            border-color: whitesmoke;
+            overflow: hidden;
     
-}
-.shop_content .container> .item{
-    width: 100%;
-    height: 300px;
-    border-radius: 10px;
-    border: solid;
-    border-color: whitesmoke;
-    overflow: hidden;
-}
-.shop_content> .container> .item> img{
-    max-width: 100%;
-    height: auto;
-}
-.shop_content> .container> .item> p::first-letter{
-    text-transform: capitalize;
-}
-.shop_content>  .container> .item> .item-content{
-    margin: 0px 8px;
-}
-.shop_content>  .container>.item> .item-content> .title{
-    margin: 0px 0px 10px;
-    line-height: 1.5em;
-    height: 3em; 
-    overflow: hidden;
-    font-size: large;
-    font-weight: bold;
-}
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+    
+            p::first-letter{
+                text-transform: capitalize;
+            }
+    
+            .item-content{
+                margin: 0px 8px;
+                .title{
+                    margin: 0px 0px 10px;
+                    line-height: 1.5em;
+                    height: 3em; 
+                    overflow: hidden;
+                    font-size: large;
+                    font-weight: bold;
+                }
+                .price{
+                    color: red;
+                    margin: 0px;
+                    font-size: larger;
+                    font-weight:bolder;
+                }
+            }
+        }
+    } 
+} 
 
-.shop_content> .container> .item> .item-content> .price{
-    color: red;
-    margin: 0px;
-    font-size: larger;
-    font-weight:bolder;
-}
 
 
 /* shop detail */

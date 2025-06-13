@@ -2,9 +2,11 @@ from django.shortcuts import render,redirect
 from .forms import InfoForm
 from .models import Info
 from .models import Book
+from .models import Keyboard
 # Create your views here.
 def shop_content(request):
-    return render(request,'myapp/shop_content.html')
+    keyboards= Keyboard.objects.all()
+    return render(request,'myapp/shop_content.html',{'kbs':keyboards})
 
 def shop_detail(request):
     return render(request,'myapp/shop_detail.html')

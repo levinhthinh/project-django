@@ -9,15 +9,18 @@
     <link rel="stylesheet" href="{% static 'shop.css' %}">
 </head>
 {% block content %}
+
+{% for kb in kbs %}
 <body class="shop_content">
     <div class="container">
         <a class="item" href="_blank">
-            <img src= "{%static 'flower.jpg' %}" alt="không load">
+            <img src= "{{kb.Image}}" alt="không load">
             <div class="item-content">
-                <p class="title">bàn phím côngbàn phím côngbàn phím côngbàn phím côngbàn phím công</p>
-                <p class="price">100000 &#8363</p>
+                <p class="title">{{kb.Name}}</p>
+                <p class="price">{{kb.Price}}</p>
             </div>
         </a>
     </div>
 </body>
+{% endfor %}
 {% endblock %}

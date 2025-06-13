@@ -1,18 +1,16 @@
 {% extends 'myapp/shop_template.html' %}
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'shop.css' %}">
 </head>
 {% block content %}
 <body class="shop_detail">
     <div class="container">
-        <div class="main">
-            <img src= "{%static 'flower.jpg' %}" alt="">
+        <div>
+            <img src= "{{kb.Image.url}}" alt="">
             <div class="add">
                 Tổng tiền giỏ hàng:
                 <button class="btn" style="width: max-content; border-radius: 4px;">Thêm vào giỏ</button>
@@ -20,7 +18,7 @@
         </div>
 
         <div class="purchase">
-            <h1>bànbàn phím côngbàn phím côngbàn phím công phím công</h1>
+            <h1>{{kb.Name}}</h1>
             <h1 class="price">1000000 &#8363</h1>
             <div class="description">
                 Mô tả ngắn:<br>

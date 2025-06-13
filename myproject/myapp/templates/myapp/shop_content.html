@@ -1,23 +1,21 @@
 {% extends 'myapp/shop_template.html' %}
-{% load static %}
+{% load humanize %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'shop.css' %}">
 </head>
 {% block content %}
-
 {% for kb in kbs %}
 <body class="shop_content">
     <div class="container">
-        <a class="item" href="_blank">
-            <img src= "{{kb.Image}}" alt="không load">
+        <a class="item" href= "{% url "shop_detail" kb.id %}">
+            <img src= "{{kb.Image.url}}" alt="không load">
             <div class="item-content">
                 <p class="title">{{kb.Name}}</p>
-                <p class="price">{{kb.Price}}</p>
+                <p class="price">{{kb.Price|intcomma}} &#8363</p>
             </div>
         </a>
     </div>

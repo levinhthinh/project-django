@@ -8,8 +8,9 @@ def shop_content(request):
     keyboards= Keyboard.objects.all()
     return render(request,'myapp/shop_content.html',{'kbs':keyboards})
 
-def shop_detail(request):
-    return render(request,'myapp/shop_detail.html')
+def shop_detail(request,kb_id):
+    keyboard=Keyboard.objects.get(pk=kb_id)
+    return render(request,'myapp/shop_detail.html',{'kb':keyboard})
 
 def add_info(request):
     if request.method == 'POST':

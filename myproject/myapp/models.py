@@ -27,11 +27,9 @@ class Keyboard(models.Model):
     Short_Description= models.TextField(max_length=300)
     Material=models.CharField(max_length=100)
     Place_of_Origin=models.CharField(max_length=100)
-    Width= models.DecimalField(max_digits=4,decimal_places=2)
     Length= models.DecimalField(max_digits=4,decimal_places=2)
+    Width= models.DecimalField(max_digits=4,decimal_places=2)
     Height= models.DecimalField(max_digits=4,decimal_places=2)
-    Dimensions=f"{Length} x {Width} x {Height}"
-
     def __str__(self):
         return self.Name
     

@@ -8,9 +8,9 @@
     <title>Document</title>
 </head>
 {% block content %}
-{% for kb in kbs %}
 <body class="shop_content">
     <div class="container">
+        {% for kb in kbs %}
         <a class="item" href= "{% url "shop_detail" kb.id %}">
             <img src= "{{kb.Image.url}}" alt="không load">
             <div class="item-content">
@@ -18,7 +18,7 @@
                 <p class="price">{{kb.Price|intcomma}} &#8363</p>
             </div>
         </a>
+        {% endfor %}
     </div>
 </body>
-{% endfor %}
 {% endblock %}

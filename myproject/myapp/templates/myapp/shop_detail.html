@@ -1,4 +1,5 @@
 {% extends 'myapp/shop_template.html' %}
+{% load humanize %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,12 +20,12 @@
 
         <div class="purchase">
             <h1>{{kb.Name}}</h1>
-            <h1 class="price">1000000 &#8363</h1>
+            <h1 class="price">{{kb.Price|intcomma}} &#8363</h1>
             <div class="description">
                 Mô tả ngắn:<br>
-                bafn phsim lafm tuw fnhucwj pas2
+                {{kb.Short_Description}}
             </div>
-            <button class="btn bold pad">
+            <button class="btn">
                 Mua ngay <br> 
                 giao tận nơi hoặc nhận tại cửa hàng
             </button>
@@ -32,7 +33,9 @@
     </div>
     <div class="information">
         <h1>Thông tin sản phẩm</h1>
-        <p>thoog tin 1</p>
+        <p><strong>Xuất sứ: </strong>{{kb.Place_of_Origin}}</p>
+        <p><strong>Vật liệu: </strong>{{kb.Material}}</p>
+        <p><strong>Kích thước <span style="color:gray">(dài, rộng, cao)</span>: </strong>{{kb.Length}} x {{kb.Width}} x {{kb.Height}} cm</p>
     </div>
 </body>
 {% endblock %}
